@@ -14,13 +14,12 @@
     </div>
 
     <ul>
-      <% gpus.forEach((gpu) => { %>
-        <li>
-          <a href="/gpus/<%= gpu._id %>">
-            <%= gpu.name %>
-          </a>
-        </li>
-      <% }) %>
-    </ul>
+  <% gpus.forEach(gpu => { %>
+    <li>
+      <a href="/gpus/<%= gpu._id %>"><%= gpu.name %></a>
+      <a class="gpu-cards" href="/gpus/<%= gpu._id %>"><%= gpu.name %></a>
+    </li>
+  <% }) %>
+</ul>
   </body>
 </html>
