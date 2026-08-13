@@ -3,12 +3,12 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
-const mongoose = require('mongoose');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
 // Models
-const GPU = require('./models/gpu');
+const Gpu = require('./models/gpu.js');
 
 const app = express();
 
