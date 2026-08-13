@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <title><%= gpu.name %></title>
+  </head>
+  <body>
+    <div class="gpu-details">
+      <h1><%= gpu.name %></h1>
+      <% if(gpu.isCooledDown){ %>
+        <p>Game On!</p>
+      <% }else{ %>
+        <p>needs more time :) </p>
+      <% } %>
+
+      <div class="gpu-actions">
+        <form
+          action="/gpus/<%=gpu._id%>?_method=DELETE"
+          method="post"
+          class="delete-form"
+        >
+          <button class="delete-button" type="submit">
+            Delete <%= gpu.name %>
+          </button>
+        </form>
+        <a class="edit-link" href="/gpus/<%= gpu._id %>/edit">
+          <div class="edit-text">Edit <%= gpu.name %></div>
+        </a>
+      </div>
+    </div>
+    <a class="gpus-index-link" href="/gpus">
+      <div class="index-link-text">Back to Gpus</div>
+    </a>
+  </body>
+</html>

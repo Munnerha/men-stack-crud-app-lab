@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <title>Create a Gpu</title>
+  </head>
+  <body>
+    <a href="/gpus/">Back to Gpus</a>
+    <h1>Create a New Gpu!</h1>
+    <form action="/gpus" method="post">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+
+    <div class="checkbox-div">
+      <label for="ready-to-eat">Ready to Eat?</label>
+      <input type="checkbox" name="isReadyToEat" id="ready-to-eat" />
+    </div>
+
+      <button type="submit">Add Gpu</button>
+    </form>
+  </body>
+</html>

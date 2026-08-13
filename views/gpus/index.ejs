@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <title>GPUs Index</title>
+  </head>
+  <body>
+    <div class="index-header-div">
+      <h1>All GPUs</h1>
+      <a class="add-gpu" href="/gpus/new">Add gpu</a>
+    </div>
+
+    <ul>
+      <% gpus.forEach((gpu) => { %>
+        <li>
+          <a href="/gpus/<%= gpu._id %>">
+            <%= gpu.name %>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
