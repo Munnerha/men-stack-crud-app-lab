@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const gpuSchema = mongoose.Schema({
   name: String,
-  isCoolDowned: Boolean,
+  isCooledDown: Boolean,
 });
 
 const Gpu = mongoose.model('Gpu', gpuSchema);
